@@ -1,33 +1,55 @@
-﻿using Practice2;
+﻿using System.Diagnostics.Metrics;
+using Practice2;
 
 class PoliceCar : Vehicle
 {
     private const string typeOfVehicle = "Police Car";
     private bool isPatrolling;
-    private SpeedRadar speedRadar;
+    private SpeedRadar? speedRadar;
     private bool isChasingACar;
     private PoliceStation policeStation; 
 
-    public PoliceCar(string plate,PoliceStation station) : base(typeOfVehicle, plate)
+    public PoliceCar(string plate,PoliceStation station, SpeedRadar? radar = null) : base(typeOfVehicle, plate)
     {
         isPatrolling = false;
-        speedRadar = new SpeedRadar();
+        speedRadar = radar;
         policeStation = station; 
         isChasingACar = false;
+    }
+
+    public void SetRadar(SpeedRadar? radar)
+    {
+        speedRadar = radar;
+
+        if (radar == null)
+        {
+            Console.WriteLine(WriteMessage("Radar removed from the police car."));
+        }
+        else
+        {
+            Console.WriteLine(WriteMessage("Radar added to the police car."));
+        }
     }
 
     public void UseRadar(Vehicle vehicle)
     {
         if (isPatrolling)
         {
-            speedRadar.TriggerRadar(vehicle);
-            string meassurement = speedRadar.GetLastReading();
-            Console.WriteLine(WriteMessage($"Triggered radar. Result: {meassurement}"));
-
-            if (meassurement.Contains("above legal speed"))
+            if (speedRadar == null)
             {
-                policeStation.ActivateAlarm(vehicle.GetPlate());
-                // It starts chasing because the method ActivateAlarm make that every policeCar that is patrolling to chase the taxi
+                Console.WriteLine(WriteMessage($"Has not implemented radar."));
+            }
+            else
+            {
+                speedRadar.TriggerRadar(vehicle);
+                string meassurement = speedRadar.GetLastReading();
+                Console.WriteLine(WriteMessage($"Triggered radar. Result: {meassurement}"));
+
+                if (meassurement.Contains("above legal speed"))
+                {
+                    policeStation.ActivateAlarm(vehicle.GetPlate());
+                    // It starts chasing because the method ActivateAlarm make that every policeCar that is patrolling to chase the taxi
+                }
             }
         }
         else
@@ -69,10 +91,17 @@ class PoliceCar : Vehicle
 
     public void PrintRadarHistory()
     {
-        Console.WriteLine(WriteMessage("Report radar speed history:"));
-        foreach (float speed in speedRadar.SpeedHistory)
+        if (speedRadar != null)
         {
-            Console.WriteLine(speed);
+            Console.WriteLine(WriteMessage("Report radar speed history:"));
+            foreach (float speed in speedRadar.SpeedHistory)
+            {
+                Console.WriteLine(speed);
+            }
+        }
+        else
+        {
+            Console.WriteLine(WriteMessage($"Has not implemented radar."));
         }
     }
 
@@ -106,4 +135,3 @@ class PoliceCar : Vehicle
         }
     }
 }
-
