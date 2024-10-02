@@ -1,4 +1,4 @@
-﻿namespace Practice1
+﻿namespace Practice2
 {
     abstract class Vehicle : IMessageWritter
     {
@@ -46,3 +46,4 @@
             return $"{this}: {message}";
         }
     }
+}

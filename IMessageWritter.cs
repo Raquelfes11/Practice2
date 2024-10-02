@@ -1,4 +1,4 @@
-﻿namespace Practice1
+﻿namespace Practice2
 {
     interface IMessageWritter
     {

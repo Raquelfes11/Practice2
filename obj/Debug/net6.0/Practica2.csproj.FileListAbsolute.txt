@@ -1,0 +1,15 @@
+/Users/raquel/Documents/GitHub/Practice2/obj/Debug/net6.0/Practica2.csproj.AssemblyReference.cache
+/Users/raquel/Documents/GitHub/Practice2/obj/Debug/net6.0/Practica2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/raquel/Documents/GitHub/Practice2/obj/Debug/net6.0/Practica2.AssemblyInfoInputs.cache
+/Users/raquel/Documents/GitHub/Practice2/obj/Debug/net6.0/Practica2.AssemblyInfo.cs
+/Users/raquel/Documents/GitHub/Practice2/obj/Debug/net6.0/Practica2.csproj.CoreCompileInputs.cache
+/Users/raquel/Documents/GitHub/Practice2/bin/Debug/net6.0/Practica2
+/Users/raquel/Documents/GitHub/Practice2/bin/Debug/net6.0/Practica2.deps.json
+/Users/raquel/Documents/GitHub/Practice2/bin/Debug/net6.0/Practica2.runtimeconfig.json
+/Users/raquel/Documents/GitHub/Practice2/bin/Debug/net6.0/Practica2.dll
+/Users/raquel/Documents/GitHub/Practice2/bin/Debug/net6.0/Practica2.pdb
+/Users/raquel/Documents/GitHub/Practice2/obj/Debug/net6.0/Practica2.dll
+/Users/raquel/Documents/GitHub/Practice2/obj/Debug/net6.0/refint/Practica2.dll
+/Users/raquel/Documents/GitHub/Practice2/obj/Debug/net6.0/Practica2.pdb
+/Users/raquel/Documents/GitHub/Practice2/obj/Debug/net6.0/Practica2.genruntimeconfig.cache
+/Users/raquel/Documents/GitHub/Practice2/obj/Debug/net6.0/ref/Practica2.dll

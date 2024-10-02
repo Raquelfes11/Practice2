@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "bkmNpZubWEY8vihgfStLJRn++xXjlLVjFThOzZlOfE2pgb+ULyRFW/omKCCLMwovRV8gmAAGeZvjriESd9K5oA==",
+  "success": true,
+  "projectFilePath": "/Users/raquel/Documents/GitHub/Practice2/Practica2.csproj",
+  "expectedPackageFiles": [
+    "/Users/raquel/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.31/microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512",
+    "/Users/raquel/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.31/microsoft.netcore.app.host.osx-arm64.6.0.31.nupkg.sha512",
+    "/Users/raquel/.nuget/packages/microsoft.netcore.app.ref/6.0.31/microsoft.netcore.app.ref.6.0.31.nupkg.sha512"
+  ],
+  "logs": []
+}
