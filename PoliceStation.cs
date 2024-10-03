@@ -44,19 +44,35 @@
                 alertIsActivated = true;
                 Console.WriteLine($"{message} is activated.");
 
-                foreach (PoliceCar policeCar in policeCars)
-                {
-                    if (policeCar.IsPatrolling())
-                    {
-                        policeCar.StartChasing(plateVehicleInfractor);
-                    }
-                }
+                SendPoliceCarsToChaseATaxi(plateVehicleInfractor);
             }
             else
             {
                 Console.WriteLine($"{message} is already activated.");
             }
             
+        }
+
+        public void SendPoliceCarsToChaseATaxi(string plateVehicleInfractor)
+        {
+            foreach (PoliceCar policeCar in policeCars)
+            {
+                if (policeCar.IsPatrolling())
+                {
+                    policeCar.StartChasing(plateVehicleInfractor);
+                }
+            }
+        }
+
+        public void StopPoliceCarsChasingATaxi()
+        {
+            foreach (PoliceCar policeCar in policeCars)
+            {
+                if (policeCar.IsPatrolling())
+                {
+                    policeCar.FinishChasing();
+                }
+            }
         }
 
         public void DeactivateAlarm()
@@ -68,13 +84,7 @@
                 alertIsActivated = false;
                 Console.WriteLine($"{message} is deactivated.");
 
-                foreach (PoliceCar policeCar in policeCars)
-                {
-                    if (policeCar.IsPatrolling())
-                    {
-                        policeCar.FinishChasing();
-                    }
-                }
+                StopPoliceCarsChasingATaxi();
             }
             else
             {
