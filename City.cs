@@ -1,7 +1,6 @@
-﻿using System.Diagnostics.Metrics;
-using Practice2;
+﻿using Practice2;
 
-class City  //  ADD taxi, si le queito la licencia quito taxi
+class City  :IMessageWritter //  ADD taxi, si le queito la licencia quito taxi
 {
 	private PoliceStation policeStation;
 	public List<Vehicle> vehicles;
@@ -61,7 +60,12 @@ class City  //  ADD taxi, si le queito la licencia quito taxi
 		vehicles.Remove(vehicle);
 	}
 
-		
+    public string WriteMessage(string message)
+    {
+        return $"{this.name}: {message}";
+    }
+
+
 }
 
 

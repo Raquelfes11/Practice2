@@ -7,8 +7,10 @@
         {
 
             City city = new City("Toledo");
-            PoliceStation policeStation = city.CreatePoliceStation("1");
+            Console.WriteLine(city.WriteMessage("Created"));
 
+            PoliceStation policeStation = city.CreatePoliceStation("1");
+            Console.WriteLine(policeStation.WriteMessage("Created."));
 
             Taxi taxi1 = new Taxi("0001 AAA");
             Console.WriteLine(taxi1.WriteMessage("Created"));
@@ -18,8 +20,14 @@
             Console.WriteLine(taxi2.WriteMessage("Created"));
             city.RegisterLicenceOfTaxi(taxi2);
 
-            PoliceCar policeCar1 = policeStation.RegisterPoliceCar("0001 CNP");
-            PoliceCar policeCar2 = policeStation.RegisterPoliceCar("0002 CNP");
+            Taxi taxi3 = new Taxi("0003 CCC");
+            Console.WriteLine(taxi3.WriteMessage("Created"));
+            city.RegisterLicenceOfTaxi(taxi3);
+
+            PoliceCar policeCar1 = policeStation.RegisterPoliceCar("0001 CNP",true);
+            PoliceCar policeCar2 = policeStation.RegisterPoliceCar("0002 CNP",true);
+            PoliceCar policeCar3 = policeStation.RegisterPoliceCar("0003 CNP", false);
+
 
             Skate skate = new Skate();
             Console.WriteLine(skate.ToString());
@@ -49,6 +57,10 @@
 
             policeCar1.PrintRadarHistory();
             policeCar2.PrintRadarHistory();
+
+            policeCar3.StartPatrolling();
+            taxi3.StartRide();
+            policeCar3.UseRadar(taxi3);
 
         }
     }

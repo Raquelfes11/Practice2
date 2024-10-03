@@ -7,27 +7,22 @@ class PoliceCar : VehicleWithPlate
     private bool isPatrolling;
     private SpeedRadar? speedRadar;
     private bool isChasingACar;
-    private PoliceStation policeStation; 
+    private PoliceStation policeStation;
+    private bool hasRadar;
 
-    public PoliceCar(string plate,PoliceStation station, SpeedRadar? radar = null) : base(typeOfVehicle, plate)
+    public PoliceCar(string plate,PoliceStation station, bool policeCarHasRadar) : base(typeOfVehicle, plate)
     {
         isPatrolling = false;
-        speedRadar = radar;
         policeStation = station; 
         isChasingACar = false;
-    }
 
-    public void SetRadar(SpeedRadar? radar)
-    {
-        speedRadar = radar;
-
-        if (radar == null)
+        if (policeCarHasRadar)
         {
-            Console.WriteLine(WriteMessage("Radar removed from the police car."));
+            speedRadar = new SpeedRadar();
         }
         else
         {
-            Console.WriteLine(WriteMessage("Radar added to the police car."));
+            speedRadar = null;
         }
     }
 
