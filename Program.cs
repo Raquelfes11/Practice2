@@ -1,5 +1,4 @@
-﻿using Practice2;
-namespace Practice2
+﻿namespace Practice2
 {
     internal class Program
     {
@@ -21,6 +20,9 @@ namespace Practice2
 
             PoliceCar policeCar1 = policeStation.RegisterPoliceCar("0001 CNP");
             PoliceCar policeCar2 = policeStation.RegisterPoliceCar("0002 CNP");
+
+            Skate skate = new Skate();
+            Console.WriteLine(skate.ToString());
 
             policeCar1.StartPatrolling(); 
             policeCar1.UseRadar(taxi1);

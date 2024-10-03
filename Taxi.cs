@@ -1,6 +1,6 @@
 ﻿namespace Practice2
 {
-    class Taxi : Vehicle
+    class Taxi : VehicleWithPlate
     {
         private static string typeOfVehicle = "Taxi";
         private bool isCarryingPassengers;

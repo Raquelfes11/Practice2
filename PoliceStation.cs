@@ -75,7 +75,6 @@
         {
             return $"The alarm of the Police Station {name}: ";
         }
-
     }
 }
 

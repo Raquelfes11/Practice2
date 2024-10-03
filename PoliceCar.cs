@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.Metrics;
 using Practice2;
 
-class PoliceCar : Vehicle
+class PoliceCar : VehicleWithPlate
 {
     private const string typeOfVehicle = "Police Car";
     private bool isPatrolling;
@@ -31,7 +31,7 @@ class PoliceCar : Vehicle
         }
     }
 
-    public void UseRadar(Vehicle vehicle)
+    public void UseRadar(VehicleWithPlate vehicle)
     {
         if (isPatrolling)
         {
