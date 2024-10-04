@@ -1,20 +1,21 @@
 ﻿<Properties StartupConfiguration="{04BB88B2-4227-47B7-807A-F52FB0E293BD}|Default">
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PoliceStation.cs">
     <Files>
-      <File FileName="PoliceCar.cs" Line="138" Column="1" />
+      <File FileName="City.cs" Line="65" Column="18" />
       <File FileName="PoliceStation.cs" Line="1" Column="1" />
-      <File FileName="Program.cs" Line="1" Column="1" />
-      <File FileName="SpeedRadar.cs" Line="42" Column="2" />
-      <File FileName="Taxi.cs" Line="9" Column="39" />
-      <File FileName="Vehicle.cs" Line="43" Column="38" />
-      <File FileName="IMessageWritter.cs" Line="7" Column="2" />
-      <File FileName="City.cs" Line="1" Column="1" />
+      <File FileName="PoliceCar.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State name="__root__" />
+        <State name="__root__">
+          <Node name="Practica2">
+            <Node name="Practica2">
+              <Node name="PoliceStation.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
